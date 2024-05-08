@@ -10,7 +10,7 @@ public class AppartmentList extends Appartment implements SortBehavior{
     //---------
     private ArrayList<Appartment> appartments = new ArrayList<Appartment>();
 
-    private SortBehavior sortBehavior = new SortBehavior();
+    private SortBehavior sortBehavior = new SortBehavior(); //i know u can create an instance with interface but not sure what else to do 
    //--------
 
    public AppartmentList(String listAddress, int listNumBedrooms, int listNumBathrooms, double listPrice)
@@ -28,8 +28,19 @@ public class AppartmentList extends Appartment implements SortBehavior{
    public void setSortBehavior(SortBehavior sortBehavior)
    {
     //ASK QUESTION: what am i supposed to set behavior to?
-    
+    sortBehavior = new BubbleSort(); //???
 
+   }
+
+   public ArrayList<Appartment> getSortedList()
+   {
+    sortBehavior.sort(appartments); //ASK QUESTION: am i using the right variable?
+    return appartments; 
+   }
+
+   public ArrayList<Appartment> getUnsortedList()
+   {
+    return appartments;
    }
    
 
