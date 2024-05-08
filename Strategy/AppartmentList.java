@@ -17,5 +17,10 @@ public class AppartmentList extends Appartment implements SortBehavior{
         super(listAddress, listNumBedrooms, listNumBathrooms, listPrice);
    }
    
-   
+   public void add(String address, int numBedrooms, int numBathrooms, double price)
+   {
+        Appartment newAppartment = new Appartment(address, numBedrooms, numBathrooms, price);
+        appartments.add(newAppartment);
+
+   }
 }
