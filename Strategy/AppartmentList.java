@@ -15,6 +15,7 @@ public class AppartmentList extends Appartment implements SortBehavior{
 
    
    //the uml doesn't give parameters so is this right?? it's an error if i don't use the paremeters
+   //i need a defualt constructor but it wont work becuase extends Appartment which doesn't have a default constructor
    public AppartmentList(String listAddress, int listNumBedrooms, int listNumBathrooms, double listPrice)
    {
      super(listAddress, listNumBedrooms, listNumBathrooms, listPrice);

@@ -2,9 +2,10 @@
 //
 import java.util.ArrayList;
 
-public class QuickSort {
+public class QuickSort implements SortBehavior{
     
     //ASK QUESTION: is this the correct way to implement quicksort? Unsure what to do when it comes to arrayList
+   @Override
     public ArrayList<Appartment> sort(ArrayList<Appartment> appartments)
     {
        int start = 0;
