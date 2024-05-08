@@ -3,7 +3,7 @@
 import java.util.ArrayList;
 
 
-public class AppartmentList extends Appartment implements SortBehavior{
+public class AppartmentList{
     
     //ASK QUESTION: i have no idea what's wrong with this and what the uml means
     // what is sortBehavior supposed to be
@@ -16,9 +16,10 @@ public class AppartmentList extends Appartment implements SortBehavior{
    
    //the uml doesn't give parameters so is this right?? it's an error if i don't use the paremeters
    //i need a defualt constructor but it wont work becuase extends Appartment which doesn't have a default constructor
-   public AppartmentList(String listAddress, int listNumBedrooms, int listNumBathrooms, double listPrice)
+   public AppartmentList()
    {
-     super(listAddress, listNumBedrooms, listNumBathrooms, listPrice);
+        appartments = new ArrayList<>();
+        sortBehavior = new BubbleSort();
    }
 
    
@@ -32,7 +33,7 @@ public class AppartmentList extends Appartment implements SortBehavior{
    public void setSortBehavior(SortBehavior sortBehavior)
    {
     //ASK QUESTION: what am i supposed to set behavior to?
-    sortBehavior = new BubbleSort(); //???
+    this.sortBehavior = sortBehavior;
 
    }
 
@@ -40,24 +41,11 @@ public class AppartmentList extends Appartment implements SortBehavior{
    {
     // sortBehavior.sort(appartments); //ASK QUESTION: am i using the right variable?
     // return appartments; 
-    sort(appartments);
-    return appartments;
+    return sortBehavior.sort(appartments);
    }
 
    public ArrayList<Appartment> getUnsortedList()
    {
     return appartments;
-   }
-   @Override
-   public ArrayList<Appartment> sort(ArrayList<Appartment> appartments)
-   {
-    setSortBehavior(sortBehavior);
-    sortBehavior.sort(appartments);
-    return appartments;
-   }
-
-
-   
-
-   
+   } 
 }
