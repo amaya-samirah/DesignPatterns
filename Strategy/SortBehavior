@@ -1,3 +1,0 @@
-public interface SortBehavior{
-    public ArrayList<appartment> sort(ArrayList<Appartment> appartment);
-}
