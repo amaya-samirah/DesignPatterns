@@ -9,7 +9,7 @@ public class QuickSort implements SortBehavior{
     public ArrayList<Appartment> sort(ArrayList<Appartment> appartments)
     {
        int start = 0;
-       int end = appartments.size();
+       int end = appartments.size()-1;
         quickSort(appartments, start, end);
 
         return appartments;
@@ -29,7 +29,7 @@ public class QuickSort implements SortBehavior{
 
     public int partition(ArrayList<Appartment> appartments)
     {
-        int appartmentsLength = appartments.size();
+        int appartmentsLength = appartments.size()-1;
         Appartment pivot = appartments.get(appartmentsLength);
         int i=0;
         for(int j=0;i<appartmentsLength;j++)

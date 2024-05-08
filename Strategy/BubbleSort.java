@@ -10,7 +10,7 @@ public class BubbleSort implements SortBehavior{
         while(swapped!=false)
         {
             swapped = false;
-            for(int i=0;i<appartments.size();i++) //ASK QUESTION: is appartments.size() equivalent to array.lenght for a normal array?
+            for(int i=0;i<appartments.size()-1;i++) 
             {
                 if(appartments.get(i+1)==null)
                     break;
