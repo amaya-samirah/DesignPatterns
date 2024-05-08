@@ -8,15 +8,18 @@ public class AppartmentList extends Appartment implements SortBehavior{
     //ASK QUESTION: i have no idea what's wrong with this and what the uml means
     // what is sortBehavior supposed to be
     //---------
-    private ArrayList<Appartment> appartments = new ArrayList<Appartment>();
+    private ArrayList<Appartment> appartments;
 
-    private SortBehavior sortBehavior = new SortBehavior(); //i know u can create an instance with interface but not sure what else to do 
+    private SortBehavior sortBehavior;  
    //--------
 
+   
+   //the uml doesn't give parameters so is this right?? it's an error if i don't use the paremeters
    public AppartmentList(String listAddress, int listNumBedrooms, int listNumBathrooms, double listPrice)
    {
      super(listAddress, listNumBedrooms, listNumBathrooms, listPrice);
    }
+
    
    public void add(String address, int numBedrooms, int numBathrooms, double price)
    {
@@ -34,14 +37,25 @@ public class AppartmentList extends Appartment implements SortBehavior{
 
    public ArrayList<Appartment> getSortedList()
    {
-    sortBehavior.sort(appartments); //ASK QUESTION: am i using the right variable?
-    return appartments; 
+    // sortBehavior.sort(appartments); //ASK QUESTION: am i using the right variable?
+    // return appartments; 
+    sort(appartments);
+    return appartments;
    }
 
    public ArrayList<Appartment> getUnsortedList()
    {
     return appartments;
    }
+   @Override
+   public ArrayList<Appartment> sort(ArrayList<Appartment> appartments)
+   {
+    setSortBehavior(sortBehavior);
+    sortBehavior.sort(appartments);
+    return appartments;
+   }
+
+
    
 
    
