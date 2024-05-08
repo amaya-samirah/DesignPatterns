@@ -14,7 +14,7 @@ public class BubbleSort implements SortBehavior{
             {
                 if(appartments.get(i+1)==null)
                     break;
-                if(appartments.get(i).compareTo(appartments.get(i+1))<0) //this price is greater than price in parameter
+                if(appartments.get(i).compareTo(appartments.get(i+1))>0) //this price is greater than price in parameter
                 {
                     Appartment temp = appartments.get(i);
                     appartments.set(i, appartments.get(i+1));

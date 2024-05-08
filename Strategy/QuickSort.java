@@ -8,9 +8,9 @@ public class QuickSort implements SortBehavior{
    @Override
     public ArrayList<Appartment> sort(ArrayList<Appartment> appartments)
     {
-       int start = 0;
-       int end = appartments.size()-1;
-        quickSort(appartments, start, end);
+    //    int start = 0;
+    //    int end = appartments.size()-1;
+        appartments = quickSort(appartments);
 
         return appartments;
     }
@@ -31,11 +31,11 @@ public class QuickSort implements SortBehavior{
         for(i =1;i<appartments.size();i++)
         {
             j = appartments.get(i);
-            if(j.compareTo(pivot)<0)
+            if(j.compareTo(pivot)>0)
             {
                 lessThanPivot.add(j);
             }
-            else
+            else if(j.compareTo(pivot)<0)
             {
                 greaterThanPivot.add(j);
             }

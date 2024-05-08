@@ -18,7 +18,7 @@ public class AppartmentList{
    //i need a defualt constructor but it wont work becuase extends Appartment which doesn't have a default constructor
    public AppartmentList()
    {
-        appartments = new ArrayList<>();
+        appartments = new ArrayList<Appartment>();
         sortBehavior = new BubbleSort();
    }
 
