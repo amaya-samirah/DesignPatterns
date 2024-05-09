@@ -18,11 +18,12 @@ public class TallyDisplay implements Observer{
     }
     public void update(ArrayList<Candidate> candidates)
     {
+        
 
     }
 
     private void display()
     {
-        
+
     }
 }
