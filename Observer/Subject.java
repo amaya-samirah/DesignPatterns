@@ -1,5 +1,5 @@
 /**
- * Holds the method for Subject
+ * Holds the methods for the Subject
  * @author Amaya Shabazz
  */
 public interface Subject {
