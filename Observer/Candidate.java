@@ -67,12 +67,57 @@ public class Candidate {
     /**
      * Adds weights to the first, second, and third place votes
      * Weight first place with 60%, second place with 30%, and third place with 10%
-     * @return Will return the total number of votes after first, second, and third have been weighted
+     * @return Will return the weighted average number of votes
      */
     public double getWeightedVotes()
     {
+        double weightedAverage = 0.0;
+
+        double weightedFirstPlaceVotes = 0.6*numFirstPlaceVotes;
+        double weightedSecondPlaceVotes = 0.3*numSecondPlaceVotes;
+        double weightedThirdPlaceVotes = 0.1*numThirdPlaceVotes;
+
+        double sumOfWeightedVotes = weightedFirstPlaceVotes+weightedSecondPlaceVotes+weightedThirdPlaceVotes;
+        weightedAverage = sumOfWeightedVotes/3;
+
+        return weightedAverage;
 
     }
+    /**
+     * Accesses the candidate's first and last name
+     * @return Will return the candidates first and last name
+     */
+    public String getFullName()
+    {
+        return this.firstName+" "+this.lastName;
+
+    }
+    /**
+     * Accesses the total number of first place votes
+     * @return Will return the number of first place votes
+     */
+    public int getNumFirstPlaceVotes()
+    {
+        return this.numFirstPlaceVotes;
+
+    }
+    /**
+     * Accesses total number of second place votes
+     * @return Will return the number of second place votes
+     */
+    public int getNumSecondPlaceVotes()
+    {
+        return this.numSecondPlaceVotes;
+    }
+    /**
+     * Accesses the total number of third place votes
+     * @return Will return the number of third place votes
+     */
+    public int getNumThirdPlaceVotes()
+    {
+        return this.numThirdPlaceVotes;
+    }
+
 
 
 
