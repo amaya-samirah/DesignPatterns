@@ -34,10 +34,46 @@ public class Candidate {
         return this.firstName.equalsIgnoreCase(firstName) && this.lastName.equalsIgnoreCase(lastName);
     }
 
+    /**
+     * Adds one vote to the toal number of votes
+     */
     public static void addVote()
+    {
+        //unsure about this
+        totalNumVotes+=1;
+
+    }
+    /**
+     * Adds one vote to the toal number of first place votes
+     */
+    public void addFirstPlaceVote()
+    {
+        numFirstPlaceVotes+=1;
+    }
+    /**
+     * Adds one vote to the toal number of second place votes
+     */
+    public void addSecondPlaceVote()
+    {
+        numSecondPlaceVotes+=1;
+    }
+    /**
+     * Adds one vote to the total number of third place votes
+     */
+    public void addThirdPlaceVotes()
+    {
+        numThirdPlaceVotes+=1;
+    }
+    /**
+     * Adds weights to the first, second, and third place votes
+     * Weight first place with 60%, second place with 30%, and third place with 10%
+     * @return Will return the total number of votes after first, second, and third have been weighted
+     */
+    public double getWeightedVotes()
     {
 
     }
+
 
 
 }
