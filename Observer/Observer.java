@@ -2,6 +2,7 @@
  * Holds the methods for the Observer
  * @author Amaya Shabazz
  */
+import java.util.ArrayList;
 public interface Observer {
 
     /**
