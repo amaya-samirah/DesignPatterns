@@ -47,6 +47,7 @@ public class StudentGovPoll implements Subject{
 
     public void notifyObserver()
     {
+        
 
     }
 
