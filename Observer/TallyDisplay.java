@@ -26,14 +26,14 @@ public class TallyDisplay implements Observer{
     /**
      * Prints the number of candidates in the list to the console
      */
-
     private void display()
     {
-        int tally =0;
-        for(int index = 0;index<candidates.size()-1;index++)
-        {
-            tally+=1;
-        }
-        System.out.println(tally);
+        // int tally =0;
+        // for(int index = 0;index<candidates.size()-1;index++)
+        // {
+        //     tally+=1;
+        // }
+        // System.out.println(tally);
+        
     }
 }
