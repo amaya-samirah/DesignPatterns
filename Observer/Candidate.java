@@ -46,14 +46,14 @@ public class Candidate {
     /**
      * Adds one vote to the toal number of first place votes
      */
-    public void addFirstPlaceVote()
+    public void addFirstPlaceVotes()
     {
         numFirstPlaceVotes+=1;
     }
     /**
      * Adds one vote to the toal number of second place votes
      */
-    public void addSecondPlaceVote()
+    public void addSecondPlaceVotes()
     {
         numSecondPlaceVotes+=1;
     }

@@ -73,6 +73,21 @@ public class StudentGovPoll implements Subject{
      */
     public void enterVotes(int firstPlace, int secondPlace, int thirdPlace)
     {
+        for(int index = 0;index<candidates.size();index++)
+        {
+            for(int firstPlaceNum=0;firstPlaceNum<firstPlace+1;firstPlaceNum++)
+            {
+                candidates.get(index).addFirstPlaceVotes();
+            }
+            for(int secondPlaceNum=0;secondPlaceNum<secondPlace+1;secondPlaceNum++)
+            {
+                candidates.get(index).addSecondPlaceVotes();
+            }
+            for(int thirdPlaceNum=0;thirdPlaceNum<thirdPlace+1;thirdPlaceNum++)
+            {
+                candidates.get(index).addThirdPlaceVotes();
+            }
+        }
 
     }
     /**
