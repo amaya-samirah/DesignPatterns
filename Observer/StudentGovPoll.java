@@ -42,13 +42,43 @@ public class StudentGovPoll implements Subject{
             index+=1;
         }
         observers.remove(index);
+    }
+    /**
+     * Notifies the observer
+     */
+    public void notifyObserver()
+    {
+
 
     }
-
-    public void notifyObserver()
+    /**
+     * Adds a candidate to the list of candidates
+     * @param firstName Holds the canidate's first name
+     * @param lastName Holds the candidate's last name
+     */
+    public void addCandidate(String firstName, String lastName)
+    {
+        Candidate temp = new Candidate(firstName, lastName);
+        candidates.add(temp);
+    }
+    /**
+     * Enters the number of first, second, and third place votes
+     * @param firstPlace Holds the number of first place votes
+     * @param secondPlace Holds the number of second place votes
+     * @param thirdPlace Holds the number of third place votes
+     */
+    public void enterVotes(int firstPlace, int secondPlace, int thirdPlace)
     {
         
 
+    }
+    /**
+     * Accesses the name of the school
+     * @return Will return the name of the school
+     */
+    public String getSchool()
+    {
+        return this.school;
     }
 
     
