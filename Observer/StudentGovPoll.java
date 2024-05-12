@@ -21,39 +21,39 @@ public class StudentGovPoll implements Subject{
      * Will register an observer
      * @param observer Holds the information for the observer
      */
+    @Override
     public void registerObserver(Observer observer)
     {
         observers.add(observer);
-
     }
     /**
      * Will remove an observer
      * @param observer Holds the information for the observer
      */
+    @Override
     public void removeObserver(Observer observer)
     {
-        // for(int index=0;index<observers.size();index++)
-        // {
+        // // for(int index=0;index<observers.size();index++)
+        // // {
 
+        // // }
+        // int index = 0;
+        // while(!observers.get(index).equals(observer))
+        // {
+        //     index+=1;
         // }
-        int index = 0;
-        while(!observers.get(index).equals(observer))
-        {
-            index+=1;
-        }
-        observers.remove(index);
+        observers.remove(observer);
     }
     /**
      * Notifies the observer
      */
+    @Override
     public void notifyObserver()
     {
         for(int index=0;index<observers.size();index++)
         {
             observers.get(index).update(candidates);
         }
-
-
     }
     /**
      * Adds a candidate to the list of candidates
@@ -73,7 +73,6 @@ public class StudentGovPoll implements Subject{
      */
     public void enterVotes(int firstPlace, int secondPlace, int thirdPlace)
     {
-        
 
     }
     /**

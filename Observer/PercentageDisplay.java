@@ -21,6 +21,7 @@ public class PercentageDisplay implements Observer {
      * Sets the list of candidates to the input list
      * @param candidates Holds the information of the list of candidates
      */
+    @Override
     public void update(ArrayList<Candidate> candidates)
     {
         this.candidates = candidates;
