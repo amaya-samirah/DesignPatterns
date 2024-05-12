@@ -16,6 +16,8 @@ public class StudentGovPoll implements Subject{
     public StudentGovPoll(String school)
     {
         this.school = school;
+        observers = new ArrayList<Observer>();
+        candidates = new ArrayList<Candidate>();
     }
     /**
      * Will register an observer
@@ -88,6 +90,7 @@ public class StudentGovPoll implements Subject{
                 candidates.get(index).addThirdPlaceVotes();
             }
         }
+        notifyObserver();
 
     }
     /**
