@@ -13,17 +13,27 @@ public class TallyDisplay implements Observer{
      */
     public TallyDisplay(Subject poll)
     {
-        
-
+        this.poll = poll;
     }
+    /**
+     * Updates the list of candidates
+     * @param candidates Holds the information of the candidates
+     */
     public void update(ArrayList<Candidate> candidates)
     {
-        
-
+        this.candidates = candidates;
     }
+    /**
+     * Prints the number of candidates in the list to the console
+     */
 
     private void display()
     {
-
+        int tally =0;
+        for(int index = 0;index<candidates.size()-1;index++)
+        {
+            tally+=1;
+        }
+        System.out.println(tally);
     }
 }
