@@ -48,6 +48,10 @@ public class StudentGovPoll implements Subject{
      */
     public void notifyObserver()
     {
+        for(int index=0;index<observers.size();index++)
+        {
+            observers.get(index).update(candidates);
+        }
 
 
     }
