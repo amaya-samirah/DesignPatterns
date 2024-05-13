@@ -39,7 +39,7 @@ public class Candidate {
      */
     public static void addVote()
     {
-        //unsure about this
+        
         totalNumVotes+=1;
 
     }
