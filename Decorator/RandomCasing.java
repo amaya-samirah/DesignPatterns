@@ -13,7 +13,7 @@ import java.util.Random;
     {
         super(passwordbeginning);
         Random random = new Random();
-        String[] temp = password.split("");
+        String[] temp = passwordBeginning.password.split("");
         for(int index = 0;index<temp.length;index++)
         {
             int chance = random.nextInt(0, 2);
@@ -32,10 +32,7 @@ import java.util.Random;
             {
                 temp[0] = temp[0].concat(temp[index]);
             }
-            else
-            {
-                return;
-            }
+            
         
         }
         password = temp[0];

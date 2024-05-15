@@ -34,10 +34,6 @@ public class EasyPassword extends Password{
             {
                 phraseArray[0] = phraseArray[0].concat(phraseArray[index]);
             }
-            else
-            {
-                return;
-            }
         }
         password = phraseArray[0];
     }

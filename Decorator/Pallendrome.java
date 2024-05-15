@@ -11,19 +11,15 @@ public class Pallendrome extends PasswordDecorator{
     public Pallendrome(Password passwordBeginning)
     {
         super(passwordBeginning);
-        String[] temp = password.split("");
-        for(int index =0;index<temp.length;index++)
-        {
-            if(index!=temp.length-1)
-            {
-               temp[0] = temp[index].concat(temp[index+1]);
-            }
-            else
-            {
-                temp[0] = temp[index-1].concat(temp[index]);
-            }
-            password = temp[0];
-        }
+       String[] temp = passwordBeginning.password.split("");
+       for(int index = 0;index<temp.length;index++)
+       {
+           if(index!=0)
+           {
+               temp[0] = temp[0].concat(temp[index]);
+           }
+       }
+       password = temp[0];
         for(int index = temp.length-1;index>=0;index--)
         {
             password = password.concat(temp[index]);

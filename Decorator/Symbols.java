@@ -11,7 +11,7 @@ public class Symbols extends PasswordDecorator{
     public Symbols(Password passwordBeginning)
     {
         super(passwordBeginning); //sets parameter as the beginning password
-        String[] temp = password.split("");
+        String[] temp = passwordBeginning.password.split("");
         for(int index = 0;index<temp.length;index++)
         {
             if(temp[index].equalsIgnoreCase("a"))
@@ -60,10 +60,7 @@ public class Symbols extends PasswordDecorator{
             {
                 temp[0] = temp[0].concat(temp[index]);
             }
-            else
-            {
-                return;
-            }
+           
         }
         password = temp[0];
     }
