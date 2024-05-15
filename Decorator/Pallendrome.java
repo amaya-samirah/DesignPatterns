@@ -24,6 +24,8 @@ public class Pallendrome extends PasswordDecorator{
         {
             password = password.concat(temp[index]);
         }
+       String[] newTemp = temp[0].split("");
+       password = password.concat(newTemp[0]);
     }
 
     /**
