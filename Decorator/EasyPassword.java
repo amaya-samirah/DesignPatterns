@@ -30,15 +30,16 @@ public class EasyPassword extends Password{
         }
         for(int index = 0;index<phraseArray.length;index++)
         {
-            if(index!=phraseArray.length-1)
+            if(index!=0)
             {
-               password = phraseArray[index].concat(phraseArray[index+1]);
+                phraseArray[0] = phraseArray[0].concat(phraseArray[index]);
             }
             else
             {
-                password = phraseArray[index-1].concat(phraseArray[index]);
+                return;
             }
         }
+        password = phraseArray[0];
     }
 
     /**

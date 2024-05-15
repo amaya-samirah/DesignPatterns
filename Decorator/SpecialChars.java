@@ -54,15 +54,16 @@ public class SpecialChars extends PasswordDecorator{
         }
         for(int index = 0;index<temp.length;index++)
         {
-            if(index!=temp.length-1)
+            if(index!=0)
             {
-               password = temp[index].concat(temp[index+1]);
+                temp[0] = temp[0].concat(temp[index]);
             }
             else
             {
-                password = temp[index-1].concat(temp[index]);
+                return;
             }
         }
+        password = temp[0];
     }
 
     /**
