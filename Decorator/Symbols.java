@@ -1,5 +1,3 @@
-
-
 /**
  * Holds the information for the password symbols
  * @author Amaya Shabazz
@@ -55,11 +53,17 @@ public class Symbols extends PasswordDecorator{
                 temp[index] = "7";
                 
             }
-
         }
-        for(int index =0;index<temp.length;index++)
+        for(int index = 0;index<temp.length;index++)
         {
-            System.out.println(temp[index]);
+            if(index!=temp.length-1)
+            {
+               password = temp[index].concat(temp[index+1]);
+            }
+            else
+            {
+                password = temp[index-1].concat(temp[index]);
+            }
         }
     }
 
