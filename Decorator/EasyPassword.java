@@ -10,7 +10,7 @@ public class EasyPassword extends Password{
      */
     public EasyPassword(String phrase)
     {
-        password = phrase;
+        
 
     }
 

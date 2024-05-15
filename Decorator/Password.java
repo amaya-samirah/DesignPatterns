@@ -9,9 +9,6 @@ public abstract class Password {
      * Accesses the password
      * @return Will return the password
      */
-    public String getPassword()
-    {
-        return this.password;
-    }
+    public abstract String getPassword();
     
 }

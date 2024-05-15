@@ -7,19 +7,16 @@ public abstract class PasswordDecorator extends Password{
 
     /**
      * Creates a new password decorator
-     * @param passwordBeginning Holds the beginning of the password
+     * @param passwordBeginning Holds the starting password
      */
     public PasswordDecorator(Password passwordBeginning)
     {
-
+        this.passwordBeginning = passwordBeginning;
     }
 
     /**
      * Accesses the password
      * @return Will return the password
      */
-    public String getPassword()
-    {
-        return "";
-    }
+    public abstract String getPassword();
 }
