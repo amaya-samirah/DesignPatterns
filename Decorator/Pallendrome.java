@@ -11,7 +11,7 @@ public class Pallendrome extends PasswordDecorator{
     public Pallendrome(Password passwordBeginning)
     {
         super(passwordBeginning);
-        String[] temp = getPassword().split("");
+        String[] temp = passwordBeginning.password.split("");
         for(int index =0;index<temp.length;index++)
         {
             if(index!=temp.length-1)

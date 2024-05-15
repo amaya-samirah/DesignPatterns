@@ -14,7 +14,7 @@ public class SpecialChars extends PasswordDecorator{
     {
         super(passwordBeginning);
         Random random = new Random();
-        String[] temp = getPassword().split("");
+        String[] temp = passwordBeginning.password.split("");
         for(int index = 0;index<temp.length;index++)
         {
             int chance = random.nextInt(0, 10); //0,1,2 will be the chance for special characters (3/10 = 30%)
