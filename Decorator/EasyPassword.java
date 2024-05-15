@@ -19,14 +19,12 @@ public class EasyPassword extends Password{
         {   
             if(size==phraseArray.length-1)
             {
-                //System.out.println(phraseArray[size]+"-"+number);
                 String temp = phraseArray[size];
                 phraseArray[size] = temp+"-"+number;
             }
             else
             {
                 String temp = phraseArray[size];
-                //System.out.println(phraseArray[size]+"-");
                 phraseArray[size] = temp+"-";
             }
         }
@@ -50,7 +48,6 @@ public class EasyPassword extends Password{
     @Override
     public String getPassword()
     {
-
         return password;
     }
 }
