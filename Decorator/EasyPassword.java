@@ -19,11 +19,26 @@ public class EasyPassword extends Password{
         {   
             if(size==phraseArray.length-1)
             {
-                System.out.println(phraseArray[size]+"-"+number);
+                //System.out.println(phraseArray[size]+"-"+number);
+                String temp = phraseArray[size];
+                phraseArray[size] = temp+"-"+number;
             }
             else
             {
-                System.out.println(phraseArray[size]+"-");
+                String temp = phraseArray[size];
+                //System.out.println(phraseArray[size]+"-");
+                phraseArray[size] = temp+"-";
+            }
+        }
+        for(int index = 0;index<phraseArray.length;index++)
+        {
+            if(index!=phraseArray.length-1)
+            {
+               password = phraseArray[index].concat(phraseArray[index+1]);
+            }
+            else
+            {
+                password = phraseArray[index-1].concat(phraseArray[index]);
             }
         }
     }
@@ -32,8 +47,10 @@ public class EasyPassword extends Password{
      * Accesses the password
      * @return Will return the password
      */
+    @Override
     public String getPassword()
     {
+
         return password;
     }
 }
