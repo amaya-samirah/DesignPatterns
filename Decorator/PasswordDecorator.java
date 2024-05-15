@@ -18,5 +18,6 @@ public abstract class PasswordDecorator extends Password{
      * Accesses the password
      * @return Will return the password
      */
+    @Override
     public abstract String getPassword();
 }
