@@ -20,7 +20,7 @@ public class Pallendrome extends PasswordDecorator{
            }
        }
        password = temp[0];
-        for(int index = temp.length-1;index>=0;index--)
+        for(int index = temp.length-1;index>0;index--)
         {
             password = password.concat(temp[index]);
         }
