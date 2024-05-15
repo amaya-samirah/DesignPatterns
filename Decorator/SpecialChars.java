@@ -47,10 +47,6 @@ public class SpecialChars extends PasswordDecorator{
                         break;
                 }
             }
-            else
-            {
-                return;
-            }
         }
         for(int index = 0;index<temp.length;index++)
         {
