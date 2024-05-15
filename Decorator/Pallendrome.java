@@ -34,6 +34,7 @@ public class Pallendrome extends PasswordDecorator{
      * Accesses the password
      * @return Will return the password
      */
+    @Override
     public String getPassword()
     {
         return password;
