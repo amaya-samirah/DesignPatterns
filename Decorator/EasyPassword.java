@@ -10,7 +10,12 @@ public class EasyPassword extends Password{
      */
     public EasyPassword(String phrase)
     {
-        
+        String[] phraseArray = phrase.split(" ");
+      
+        for(int size =0;size<phraseArray.length;size++)
+        {
+            System.out.println(phraseArray[size]+"-");
+        }
 
     }
 
