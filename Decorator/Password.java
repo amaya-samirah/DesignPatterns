@@ -5,6 +5,10 @@
 public abstract class Password {
     protected String password;
     
+    /**
+     * Accesses the password
+     * @return Will return the password
+     */
     public String getPassword()
     {
         return this.password;
