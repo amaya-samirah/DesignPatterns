@@ -27,6 +27,7 @@ public abstract class State {
     public void pressStarButton()
     {
         s("Playing \"Twinkle Twinkle Litte Star\"");
+        box.playSong("Twinkle Twinkle", starLyrics);
         
     }
 
@@ -36,6 +37,7 @@ public abstract class State {
     public void pressHappyButton()
     {
         s("Playing \"If You're Happy and You Know It\"");
+        box.playSong("Happy", happyLyrics);
     }
 
     /**

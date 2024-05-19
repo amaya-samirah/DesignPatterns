@@ -34,6 +34,7 @@ public class EnglishState extends State{
     public void pressFrenchButton()
     {
         s("Changing to French mode...");
+       
     }
 
     /**

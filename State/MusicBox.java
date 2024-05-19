@@ -26,28 +26,38 @@ public class MusicBox {
      */
     public void pressStarButton()
     {
-
+        state.pressStarButton();
     }
      /**
      * Starts the happy state
      */
     public void pressHappyButton()
     {
-
+        state.pressHappyButton();
     }
     /**
      * Starts the English state
      */
     public void pressEnglishButton()
     {
-
-        state.pressEnglishButton();
+        if(state == englishState)
+        {
+            s("Already in English mode...");
+        }
+        else
+            state.pressEnglishButton();
     }
     /**
      * Starts the French state
      */
     public void pressFrenchButton()
     {
+        if(state == frenchState)
+        {
+            s("Already in French mode...");
+        }
+        else
+            state.pressFrenchButton();
 
     }
     /**
@@ -56,6 +66,12 @@ public class MusicBox {
     public void pressSpanishButton()
     {
 
+        if(state == spanishState)
+        {
+            s("Already in Spanish mode...");
+        }
+        else
+            state.pressSpanishButton();
     }
     /**
      * Sets the state
@@ -71,8 +87,7 @@ public class MusicBox {
      */
     public State getEnglishState()
     {
-
-        return state;
+        return englishState;
     }
 
     /**
@@ -81,8 +96,7 @@ public class MusicBox {
      */
     public State getFrenchState()
     {
-
-        return state;
+        return frenchState;
     }
     /**
      * Gets the Spanish state
@@ -90,8 +104,7 @@ public class MusicBox {
      */
     public State getSpanishState()
     {
-
-        return state;
+        return spanishState;
     }
 
     /**
@@ -101,6 +114,21 @@ public class MusicBox {
      */
     public void playSong(String songName, ArrayList<String> lyrics)
     {
-        
+        for(int index = 0;index<lyrics.size();index++)
+        {
+            s(lyrics.get(index));
+            LanguageSongs.sleep();
+        }
+        LanguageSongs.clear();
+    }
+
+    /**
+     * Prints out to console
+     * @param string Holds the string to print
+     */
+    private void s(String string)
+    {
+        System.out.println(string);
+
     }
 }
