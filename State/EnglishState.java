@@ -15,6 +15,7 @@ public class EnglishState extends State{
     {
 
         super(box, TWINKLE_FILE_NAME, HAPPY_FILE_NAME);
+        this.box = box;
     }
 
      /**
