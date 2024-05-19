@@ -15,7 +15,7 @@ public class MusicBox {
      */
     public MusicBox()
     {
-        englishState.pressEnglishButton();
+        
     }
 
     /**
