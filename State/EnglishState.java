@@ -23,6 +23,32 @@ public class EnglishState extends State{
      */
     public void pressEnglishButton()
     {
+        s("Already in English mode...");
+    }
+
+    /**
+     * Changes to french state
+     */
+    public void pressFrenchButton()
+    {
+        s("Changing to French mode...");
+    }
+
+    /**
+     * Changes to spanish state
+     */
+    public void pressSpanishButton()
+    {
+        s("Changing to Spanish mode...");
+    }
+
+    /**
+     * Prints out to console
+     * @param string Holds the string to print
+     */
+    private void s(String string)
+    {
+        System.out.println(string);
 
     }
 }

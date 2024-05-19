@@ -5,7 +5,7 @@
 import java.util.ArrayList;
 public abstract class State {
     protected MusicBox box;
-    private ArrayList<String> starLyrics;
+    private final ArrayList<String> starLyrics;
     private ArrayList<String> happyLyrics;
 
     /**
@@ -22,11 +22,11 @@ public abstract class State {
     }
 
     /**
-     * Starts the music box
+     * Starts the twinkle state
      */
-    public void pressStartButton()
+    public void pressStarButton()
     {
-        
+        s("Playing \"Twinkle Twinkle Litte Star\"");
         
     }
 
@@ -35,30 +35,31 @@ public abstract class State {
      */
     public void pressHappyButton()
     {
-
+        s("Playing \"If You're Happy and You Know It\"");
     }
 
     /**
      * Starts the English state
      */
-    public void pressEnglishButton()
-    {
-
-    }
+    public abstract  void pressEnglishButton();
 
     /**
      * Starts the French state
      */
-    public void pressFrenchButton()
-    {
-
-    }
+    public abstract void pressFrenchButton();
 
     /**
      * Starts the Spansih state
      */
-    public void pressSpanishButton()
+    public abstract void pressSpanishButton();
+
+    /**
+     * Prints out to console
+     * @param string Holds the string to print
+     */
+    private void s(String string)
     {
+        System.out.println(string);
 
     }
 }
