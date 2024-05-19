@@ -38,7 +38,6 @@ public class SpanishState extends State{
     public void pressSpanishButton()
     {
         s("In Spanish mode...");
-       // box.playSong("Happy", FileReader.getLyrics(HAPPY_FILE_NAME));
     }
 
     /**

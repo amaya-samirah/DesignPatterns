@@ -18,7 +18,6 @@ public class MusicBox {
         englishState = new EnglishState(this);
         frenchState = new FrenchState(this);
         spanishState = new SpanishState(this);
-      //  state = englishState;
     }
 
     /**
