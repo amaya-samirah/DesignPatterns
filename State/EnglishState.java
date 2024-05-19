@@ -24,7 +24,7 @@ public class EnglishState extends State{
     @Override
     public void pressEnglishButton()
     {
-        s("Already in English mode...");
+        s("In English mode...");
     }
 
     /**
@@ -33,7 +33,7 @@ public class EnglishState extends State{
     @Override
     public void pressFrenchButton()
     {
-        s("Changing to French mode...");
+        s("In French mode...");
        
     }
 
@@ -43,7 +43,7 @@ public class EnglishState extends State{
     @Override
     public void pressSpanishButton()
     {
-        s("Changing to Spanish mode...");
+        s("In Spanish mode...");
     }
 
     /**

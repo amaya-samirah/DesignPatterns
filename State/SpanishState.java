@@ -18,7 +18,7 @@ public class SpanishState extends State{
     @Override
     public void pressEnglishButton()
     {
-        s("Chaning to English mode...");
+        s("In English mode...");
     }
 
     /**
@@ -27,7 +27,8 @@ public class SpanishState extends State{
     @Override
     public void pressFrenchButton()
     {
-        s("Changing to French mode...");
+        s("In French mode...");
+        
     }
 
     /**
@@ -36,7 +37,8 @@ public class SpanishState extends State{
     @Override
     public void pressSpanishButton()
     {
-        s("Already in Spanish mode...");
+        s("In Spanish mode...");
+       // box.playSong("Happy", FileReader.getLyrics(HAPPY_FILE_NAME));
     }
 
     /**

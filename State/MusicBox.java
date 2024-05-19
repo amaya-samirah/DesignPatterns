@@ -18,7 +18,7 @@ public class MusicBox {
         englishState = new EnglishState(this);
         frenchState = new FrenchState(this);
         spanishState = new SpanishState(this);
-        state = englishState;
+      //  state = englishState;
     }
 
     /**
@@ -45,7 +45,10 @@ public class MusicBox {
             s("Already in English mode...");
         }
         else
+        {
+            this.state = englishState;
             state.pressEnglishButton();
+        }
     }
     /**
      * Starts the French state
@@ -57,7 +60,10 @@ public class MusicBox {
             s("Already in French mode...");
         }
         else
+        {
+            this.state = frenchState;
             state.pressFrenchButton();
+        }
 
     }
     /**
@@ -71,7 +77,10 @@ public class MusicBox {
             s("Already in Spanish mode...");
         }
         else
+        {
+            this.state = spanishState;
             state.pressSpanishButton();
+        }
     }
     /**
      * Sets the state
