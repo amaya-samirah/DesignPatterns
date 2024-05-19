@@ -11,4 +11,41 @@ public class SpanishState extends State{
         super(box, TWINKLE_FILE_NAME, HAPPY_FILE_NAME);
         this.box = box;
     }
+
+    /**
+     * Starts the English state
+     */
+    @Override
+    public void pressEnglishButton()
+    {
+        s("Chaning to English mode...");
+    }
+
+    /**
+     * Changes to french state
+     */
+    @Override
+    public void pressFrenchButton()
+    {
+        s("Changing to French mode...");
+    }
+
+    /**
+     * Changes to spanish state
+     */
+    @Override
+    public void pressSpanishButton()
+    {
+        s("Already in Spanish mode...");
+    }
+
+    /**
+     * Prints out to console
+     * @param string Holds the string to print
+     */
+    private void s(String string)
+    {
+        System.out.println(string);
+
+    }
 }
