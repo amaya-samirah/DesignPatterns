@@ -15,7 +15,7 @@ public class MusicBox {
      */
     public MusicBox()
     {
-        
+        englishState = new EnglishState(this);
     }
 
     /**
@@ -38,6 +38,7 @@ public class MusicBox {
     public void pressEnglishButton()
     {
 
+        state.pressEnglishButton();
     }
     /**
      * Starts the French state
