@@ -2,7 +2,8 @@
  * Holds the questions for the game
  * @author Amaya Shabazz
  */
-public class Question {
+import  java.util.Random;
+ public class Question {
     private static final String ANSI_GREEN = "\u001B[32m";
     private static final String ANSI_RED = "\u001B[31m";
     private static final String ANSI_BLACK = "\u001B[30m";
@@ -18,7 +19,7 @@ public class Question {
      */
     public Question()
     {
-
+        //ask what even is supposed to go here
     }
 
     /**
@@ -27,7 +28,32 @@ public class Question {
      */
     public String getQuestion()
     {
+        Random random = new Random();
+        num1 = random.nextInt(1, 101);
+        num2 = random.nextInt(1, 101);
+        int chance = random.nextInt(1, 4); //numbers 1-3 correspond to each operand
+        switch(chance)
+        {
+            case 1:
+            {
+                answer = num1 + num2;
+                //ask how to use the label to print
+                break;
+            }
+            case 2:
+            {
+                answer = num1 - num2;
+                break;
 
+            }
+            case 3:
+            {
+                answer = num1 * num2;
+                break;
+            }
+            default:
+                break;
+        }
     }
 
     /**
@@ -36,7 +62,7 @@ public class Question {
      */
     public void setUserAnswer(int answer)
     {
-
+        this.userAnswer = answer;
     }
 
     /*
@@ -44,7 +70,7 @@ public class Question {
      */
     public boolean isCorrect()
     {
-
+        return userAnswer==answer;
     }
 
     /**
