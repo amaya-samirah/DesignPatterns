@@ -7,6 +7,7 @@ public class MathGame {
     private static int NUM_QUESTIONS;
     private MathGame mathGame;
     private ArrayList<Question> questions;
+    //ask where supposed to get/make array of questions
 
     /**
      * Constructs a new instance of math game for the class
