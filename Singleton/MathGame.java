@@ -15,10 +15,11 @@ public class MathGame {
      */
     private MathGame()
     {
-        this.NUM_QUESTIONS = 3;
+        NUM_QUESTIONS = 3;
+        questions = new ArrayList<Question>();
         for(int index = 0; index < NUM_QUESTIONS; index++)
         {
-         questions.get(index).getQuestion();
+         //how to add questions to the array ???
         }
     }
 
