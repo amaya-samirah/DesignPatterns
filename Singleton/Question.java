@@ -29,7 +29,6 @@ import  java.util.Random;
             {
                 operand = Operand.PLUS;
                 answer = num1 + num2;
-                //ask how to use the label to print
                 break;
             }
             case 2:
@@ -37,7 +36,6 @@ import  java.util.Random;
                 operand = Operand.MINUS;
                 answer = num1 - num2;
                 break;
-
             }
             case 3:
             {

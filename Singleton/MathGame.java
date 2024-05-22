@@ -23,8 +23,8 @@ public class MathGame {
     }
 
     /**
-     * Constructs a new instane of math game for outside classes
-     * @return
+     * Constructs a new instance of math game for outside classes
+     * @return Will return an instance of MathGame
      */
     public static MathGame getInstance()
     {
