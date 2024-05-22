@@ -19,15 +19,6 @@ import  java.util.Random;
      */
     public Question()
     {
-        //ask what even is supposed to go here
-    }
-
-    /**
-     * Accesses the question
-     * @return Will return a question
-     */
-    public String getQuestion()
-    {
         Random random = new Random();
         num1 = random.nextInt(1, 101);
         num2 = random.nextInt(1, 101);
@@ -36,24 +27,37 @@ import  java.util.Random;
         {
             case 1:
             {
+                operand = Operand.PLUS;
                 answer = num1 + num2;
                 //ask how to use the label to print
                 break;
             }
             case 2:
             {
+                operand = Operand.MINUS;
                 answer = num1 - num2;
                 break;
 
             }
             case 3:
             {
+                operand = Operand.MULTIPLY;
                 answer = num1 * num2;
                 break;
             }
             default:
                 break;
         }
+    }
+
+    /**
+     * Accesses the question
+     * @return Will return a question
+     */
+    public String getQuestion()
+    {
+        Question question = new Question();
+        return question.num1+" "+question.operand.label+" "+question.num2+" = ";
     }
 
     /**
@@ -78,7 +82,18 @@ import  java.util.Random;
      */
     public String toString()
     {
-
+        if(answer==userAnswer)
+        {
+            return ANSI_GREEN+getQuestion()+ANSI_BLACK;
+        }
+        else if(answer!=userAnswer)
+        {
+            return ANSI_RED+getQuestion()+ANSI_BLACK;
+        }
+        else
+        {
+            return "Error";
+        }
     }
     
 }

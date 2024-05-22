@@ -3,9 +3,10 @@
  * @author Amaya Shabazz
  */
 import java.util.ArrayList;
+import java.util.Iterator;
 public class MathGame {
-    private static int NUM_QUESTIONS;
-    private MathGame mathGame;
+    public static int NUM_QUESTIONS;
+    private static MathGame mathGame;
     private ArrayList<Question> questions;
     //ask where supposed to get/make array of questions
 
@@ -14,18 +15,21 @@ public class MathGame {
      */
     private MathGame()
     {
-        
+        this.NUM_QUESTIONS = 3;
+        for(int index = 0; index < NUM_QUESTIONS; index++)
+        {
+         questions.get(index).getQuestion();
+        }
     }
 
     /**
      * Constructs a new instane of math game for outside classes
      * @return
      */
-    public MathGame getInstance()
+    public static MathGame getInstance()
     {
         mathGame = new MathGame();
         return mathGame;
-
     }
 
     /**
@@ -34,6 +38,6 @@ public class MathGame {
      */
     public Iterator<Question> getIterator()
     {
-        
+       return questions.iterator();
     }
 }

@@ -1,5 +1,5 @@
-import java.util.Scanner;
 import java.util.Iterator;
+import java.util.Scanner;
 
 public class MathDriver {
     private Scanner reader;
@@ -21,7 +21,7 @@ public class MathDriver {
         while(questions.hasNext()){
             Question question = questions.next();
             System.out.print(question.getQuestion());
-            question.setUserAnwer(getInt(""));
+            question.setUserAnswer(getInt("")); //this previous said setUserAnwer so I changed it
         }
     }
 
@@ -38,7 +38,7 @@ public class MathDriver {
                 total++;
             }
         }
-        System.out.println("\nTotal: " + total + "/" + game.NUM_QUESTIONS);
+        System.out.println("\nTotal: " + total + "/" + game.NUM_QUESTIONS); //had to change go public for this to work
     }
 
     private int getInt(String prompt){
