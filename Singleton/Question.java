@@ -56,8 +56,7 @@ import  java.util.Random;
      */
     public String getQuestion()
     {
-        Question question = new Question();
-        return question.num1+" "+question.operand.label+" "+question.num2+" = ";
+        return num1+" "+operand.label+" "+num2+" = ";
     }
 
     /**
@@ -80,15 +79,16 @@ import  java.util.Random;
     /**
      * Prints the necessary info to the console
      */
+    @Override
     public String toString()
     {
         if(answer==userAnswer)
         {
-            return ANSI_GREEN+getQuestion()+ANSI_BLACK;
+            return ANSI_GREEN+getQuestion()+answer+ANSI_BLACK;
         }
         else if(answer!=userAnswer)
         {
-            return ANSI_RED+getQuestion()+ANSI_BLACK;
+            return ANSI_RED+getQuestion()+answer+ANSI_BLACK;
         }
         else
         {
