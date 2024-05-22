@@ -86,13 +86,9 @@ import  java.util.Random;
         {
             return ANSI_GREEN+getQuestion()+answer+ANSI_BLACK;
         }
-        else if(answer!=userAnswer)
-        {
-            return ANSI_RED+getQuestion()+answer+ANSI_BLACK;
-        }
         else
         {
-            return "Error";
+            return ANSI_RED+getQuestion()+answer+ANSI_BLACK;
         }
     }
     

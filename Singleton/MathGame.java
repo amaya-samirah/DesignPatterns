@@ -28,7 +28,9 @@ public class MathGame {
      */
     public static MathGame getInstance()
     {
-        mathGame = new MathGame();
+        if(mathGame == null){
+            mathGame = new MathGame();
+        }
         return mathGame;
     }
 
