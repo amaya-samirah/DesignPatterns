@@ -20,6 +20,7 @@ public class MathGame {
         for(int index = 0; index < NUM_QUESTIONS; index++)
         {
          //how to add questions to the array ???
+         questions.add(new Question());
         }
     }
 
